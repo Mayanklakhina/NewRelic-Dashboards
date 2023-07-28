@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "newrelic" {
-  account_id = 4043702
-  api_key = "NRAK-GOQU1AWJ9YOJ1B7T97BQQ8YD736"  # Usually prefixed with 'NRAK'
+  account_id = var.acc_id
+  api_key = var.apk  # Usually prefixed with 'NRAK'
   region = "US"  
 }
