@@ -40,21 +40,7 @@ resource "newrelic_one_dashboard" "mayank09231" {
         account_id = var.acc_id
         query      = "FROM Transaction SELECT average(duration) FACET appName"
       }
-      # Must be another dashboard GUID
-      filter_current_dashboard = true
-
-      # color customization
-      colors {
-        color = "#722727"
-        series_overrides {
-          color = "#722322"
-          series_name = "Node"
-        }
-        series_overrides {
-          color = "#236f70"
-          series_name = "Java"
-        }
-      }
+     
    }
 
   }
